@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/employee', 'EmployeeController@index')
+    ->middleware(['auth'])->name('Employee.vacation_form');
+Route::post('/employee', 'EmployeeController@index')
+    ->middleware(['auth'])->name('Employee.vacation_form');
+
+require __DIR__.'/auth.php';
