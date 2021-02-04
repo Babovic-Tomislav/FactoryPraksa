@@ -14,8 +14,7 @@ class ApproverController extends Controller
 {
     public function index(EmployeeRepositoryInterface $employeeRepository)
     {
-        dd(1);
-        return view('Employee.approver_homepage');
+        return route('dashboard');
     }
 
     public function vacation(EmployeeRepositoryInterface $employeeRepository)

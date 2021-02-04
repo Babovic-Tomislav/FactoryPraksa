@@ -14,7 +14,7 @@
                 @elseif($role == 'approver')
                     @include('Employee.approver_homepage')
                 @elseif($role == 'admin')
-                    @include('Employee.admin_homepage')
+
                 @endif
             </div>
         </div>

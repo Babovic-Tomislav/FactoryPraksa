@@ -17,16 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => ['homepage:employee', 'auth']], function(){
+Route::group(['middleware' => 'auth'], function(){
     Route::get('/employee', 'Employee\EmployeeController@index')
         ->name('dashboard');
+});
+Route::group(['middleware' => 'homepage:employee', 'auth'], function(){
     Route::post('/employee/createrequest', 'VacationController@create')
         ->name('employeeVacationRequest');
 });
 
-Route::group(['middleware' => ['homepage:approver', 'auth']], function(){
-    Route::get('/employee', 'Employee\ApproverController@index')
-        ->name('approverHomepage');
+Route::group(['middleware' => 'homepage:approver', 'auth'], function(){
     Route::get('/vacationrequest', 'Employee\ApproverController@vacation')
         ->name('vacationRequest');
     Route::get('/employeesvacation', 'Employee\ApproverController@vacationList')
@@ -34,8 +34,6 @@ Route::group(['middleware' => ['homepage:approver', 'auth']], function(){
 });
 
 Route::group(['middleware' => ['homepage:admin', 'auth']], function(){
-    Route::get('/employee', 'Employee\AdminController@index')
-        ->name('adminHomepage');
 });
 
 

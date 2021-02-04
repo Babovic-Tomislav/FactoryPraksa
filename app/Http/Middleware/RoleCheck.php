@@ -23,7 +23,7 @@ class RoleCheck
         if ($employee->role->role_name == $role) {
             return $next($request);
         } else {
-            return redirect(RouteServiceProvider::HOME);
+            redirect('/');
         }
     }
 }
