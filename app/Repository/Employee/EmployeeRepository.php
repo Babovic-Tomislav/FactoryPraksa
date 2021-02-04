@@ -7,7 +7,7 @@ namespace App\Repository\Employee;
 use App\Models\Employee;
 use Illuminate\Support\Facades\Auth;
 
-class EmployeeRepository implements IEmployeeRepository
+class EmployeeRepository implements EmployeeRepositoryInterface
 {
 
     public function all()
@@ -17,7 +17,6 @@ class EmployeeRepository implements IEmployeeRepository
 
     public function store()
     {
-
     }
 
     public function create(array $data)
@@ -25,12 +24,10 @@ class EmployeeRepository implements IEmployeeRepository
         return Employee::create($data);
     }
 
-    public function getLoggedUser()
+    public function getLoggedUser(array $withParameters = [])
     {
-        return Employee::where('id', Auth::user()
-            ->employee_id)
-            ->with('role')
-            ->with('vacation')
+        return Employee::where('id', Auth::user()->employee_id)
+            ->with($withParameters)
             ->first();
     }
 }

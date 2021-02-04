@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +17,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/employee', 'EmployeeController@index')
-    ->middleware(['auth'])->name('Employee.vacation_form');
-Route::post('/employee', 'EmployeeController@index')
-    ->middleware(['auth'])->name('Employee.vacation_form');
+Route::group(['middleware' => ['homepage:employee', 'auth']], function(){
+    Route::get('/employee', 'Employee\EmployeeController@index')
+        ->name('dashboard');
+    Route::post('/employee/createrequest', 'VacationController@create')
+        ->name('employeeVacationRequest');
+});
+
+Route::group(['middleware' => ['homepage:approver', 'auth']], function(){
+    Route::get('/employee', 'Employee\ApproverController@index')
+        ->name('approverHomepage');
+    Route::get('/vacationrequest', 'Employee\ApproverController@vacation')
+        ->name('vacationRequest');
+    Route::get('/employeesvacation', 'Employee\ApproverController@vacationList')
+        ->name('employeesVacationList');
+});
+
+Route::group(['middleware' => ['homepage:admin', 'auth']], function(){
+    Route::get('/employee', 'Employee\AdminController@index')
+        ->name('adminHomepage');
+});
+
 
 require __DIR__.'/auth.php';

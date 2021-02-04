@@ -4,7 +4,7 @@
 namespace App\Repository\User;
 
 
-interface IUserRepository
+interface UserRepositoryInterface
 {
     public function all();
     public function store();

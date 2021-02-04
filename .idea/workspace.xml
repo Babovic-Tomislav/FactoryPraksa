@@ -20,18 +20,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb8805ac-7251-4e1f-95a7-7edc3d436221" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Employee/ApproverController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Employee/EmployeeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RoleCheck.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/EmployeeServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Providers/UserServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Vacation/VacationRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/Vacation/VacationRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Requests/VacationRequestCreate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Employee/approver_homepage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VacationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VacationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VacationRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VacationRequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Auth/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/LoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Vacation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vacation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Employee/EmployeeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Employee/EmployeeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Employee/IEmployeeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Employee/EmployeeRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/User/IUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/User/UserRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/User/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/User/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Employee/vacation_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Employee/vacation_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +191,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mi\Desktop\praksa\laravel\FactoryPraksa\app\Http\Controllers\Employees" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mi\Desktop\praksa\laravel\FactoryPraksa\bootstrap" />
     </key>
@@ -196,6 +216,7 @@
       <workItem from="1612276047814" duration="1228000" />
       <workItem from="1612278868204" duration="2085000" />
       <workItem from="1612338223857" duration="26558000" />
+      <workItem from="1612424013232" duration="24681000" />
     </task>
     <servers />
   </component>
@@ -215,41 +236,45 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="633" y="187" key="#com.intellij.ide.util.MemberChooser" timestamp="1612346597446">
+    <state x="633" y="187" key="#com.intellij.ide.util.MemberChooser" timestamp="1612438574731">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="633" y="187" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1612346597446" />
-    <state x="585" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612269603973">
+    <state x="633" y="187" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1612438574731" />
+    <state x="585" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612438560781">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="585" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612269603973" />
-    <state x="570" y="260" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612355382502">
+    <state x="585" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612438560781" />
+    <state x="570" y="260" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612445064497">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="570" y="260" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612355382502" />
-    <state x="523" y="229" key="NewPhpClassDialog" timestamp="1612353277575">
+    <state x="570" y="260" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612445064497" />
+    <state x="927" y="202" key="NewPhpClassDialog" timestamp="1612450010313">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="523" y="229" key="NewPhpClassDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612353277575" />
-    <state x="644" y="428" key="NewPhpFileDialog" timestamp="1612347479847">
+    <state x="927" y="202" key="NewPhpClassDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612450010313" />
+    <state x="644" y="428" key="NewPhpFileDialog" timestamp="1612442705852">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="644" y="428" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612347479847" />
+    <state x="644" y="428" key="NewPhpFileDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612442705852" />
     <state x="371" y="150" key="SettingsEditor" timestamp="1612275983939">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="371" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1612275983939" />
-    <state x="622" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612375720001">
+    <state x="92" y="92" width="1496" height="826" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1612445870933">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="622" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1612375720001" />
+    <state x="92" y="92" width="1496" height="826" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1612445870933" />
+    <state x="622" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612448912003">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="622" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1612448912003" />
     <state x="496" y="233" key="run.anything.popup" timestamp="1612353659524">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="496" y="233" key="run.anything.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1612353659524" />
-    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1612356590466">
+    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1612447698590">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1612356590466" />
+    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1612447698590" />
   </component>
 </project>

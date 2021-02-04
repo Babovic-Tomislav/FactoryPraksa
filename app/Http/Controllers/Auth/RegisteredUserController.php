@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Repository\Employee\EmployeeRepository;
+use App\Repository\Employee\EmployeeRepositoryInterface;
 use App\Repository\User\UserRepository;
+use App\Repository\User\UserRepositoryInterface;
 use App\Requests\StoreUser;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -29,8 +31,8 @@ class RegisteredUserController extends Controller
 
     public function store(
         StoreUser $request,
-        EmployeeRepository $employeeRepository,
-        UserRepository $userRepository
+        EmployeeRepositoryInterface $employeeRepository,
+        UserRepositoryInterface $userRepository
     ) {
         $employee
             = $employeeRepository->create($this->getEmployeeDataFromRequest($request));

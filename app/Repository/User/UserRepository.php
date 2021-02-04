@@ -6,7 +6,7 @@ namespace App\Repository\User;
 
 use App\Models\User;
 
-class UserRepository implements IUserRepository
+class UserRepository implements UserRepositoryInterface
 {
 
     public function all()

@@ -3,87 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vacation;
-use Illuminate\Http\Request;
+use App\Repository\Employee\EmployeeRepositoryInterface;
+use App\Requests\VacationRequestCreate;
+use Illuminate\Support\Facades\Auth;
 
 class VacationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function create(VacationRequestCreate $request)
     {
-        //
-    }
+        $data = [
+            'start_date' => date('Y-m-d', strtotime($request->startDate)),
+            'end_date' => date('Y-m-d', strtotime($request->endDate)),
+            'employee_id' => Auth::user()->employee_id
+            ];
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+        Vacation::create($data);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Vacation  $vacation
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Vacation $vacation)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Vacation  $vacation
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Vacation $vacation)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param   \App\Models\Vacation     $vacation
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Vacation $vacation)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param   \App\Models\Vacation  $vacation
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Vacation $vacation)
-    {
-        //
+        return redirect('/employee');
     }
 }
